@@ -243,6 +243,12 @@ body {
     background-color: var(--main-active-color);
 }
 
+.social-link:hover .social-box,
+.social-link:focus .social-box {
+    background-color: var(--main-active-color);
+    color: var(--dark-bg-text);
+}
+
 /* Main */
 
 .list {
@@ -500,8 +506,8 @@ body {
     fill: currentColor;
 }
 
-.social-container:hover,
-.social-container:focus {
+.social-link:hover .social-container,
+.social-link:focus .social-container {
     background-color: var(--main-active-color);
     color: var(--dark-bg-text);
 }
