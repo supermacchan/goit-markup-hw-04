@@ -7,6 +7,7 @@
     --dark-bg-text: #FFFFFF;
     --dark-bg-contacts: rgba(255, 255, 255, .6);
     --dark-bg-color: #2F303A;
+    --icon-color: #AFB1B8;
 }
 
 /* Глобальные стили */
@@ -154,6 +155,10 @@ body {
     background-color: var(--dark-bg-color);
 }
 
+.footer-container {
+    display: flex;
+}
+
 .footer-list {
     margin-top: 20px;
     margin-bottom: 0;
@@ -188,6 +193,54 @@ body {
 
 .footer-list .item:not(:last-child) {
     margin-bottom: 9px;
+}
+
+.footer-social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.second-block {
+    margin-left: 70px;
+}
+
+.callout {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 12px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--dark-bg-text);
+}
+
+.social-box {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--dark-bg-text);
+}
+
+.footer-social > .item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-box:hover,
+.social-box:focus {
+    background-color: var(--main-active-color);
 }
 
 /* Main */
@@ -300,13 +353,14 @@ body {
 }
 
 .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 270px;
     height: 120px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 100px;
-    padding-right: 100px;
     margin-bottom: 30px;
+    border-radius: 4px;
 
     background-color: #F5F4FA;
 }
@@ -372,19 +426,22 @@ body {
     padding: 0;
 }
 
-.team-list .item:not(:last-child) {
+.team-list > .item:not(:last-child) {
     margin-right: 30px;
 }
 
-.team-list .item {
+.team-list > .item {
     width: calc((100% - 120px) / 4);
+    padding-bottom: 30px;
 
     background-color: var(--main-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .about-member {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 0;
 }
 
 .member-name {
@@ -400,7 +457,7 @@ body {
 
 .job-title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.19;    
@@ -410,6 +467,90 @@ body {
 .member-photo {
     display: block;
     max-width: 100%;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.social-container {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+}
+
+.social-list > .item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-container:hover,
+.social-container:focus {
+    background-color: var(--main-active-color);
+    color: var(--dark-bg-text);
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--icon-color);
+}
+
+/* Партнеры */
+
+.partners-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.partners-list > .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.partner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    
+    background-color: var(--main-bg-color);
+    color: var(--icon-color);
+}
+
+.partner-icon {
+    width: 106px;
+    height: 60px;
+    
+    fill: currentColor;
+}
+
+.partner-container:hover,
+.partner-container:focus {
+    border-color: var(--main-active-color);
+    color: var(--main-active-color);
 }
 
 /* Портфолио */
@@ -511,4 +652,14 @@ body {
 
     font-size: 16px;
     line-height: 1.88;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.project-list > .item:hover,
+.project-list > .item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
