@@ -553,8 +553,8 @@ body {
     fill: currentColor;
 }
 
-.partner-container:hover,
-.partner-container:focus {
+.partner-link:hover .partner-container,
+.partner-link:focus .partner-container {
     border-color: var(--main-active-color);
     color: var(--main-active-color);
 }
